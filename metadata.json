@@ -1,0 +1,5 @@
+{
+  "name": "Smart Home Dashboard",
+  "description": "A modern, responsive smart home dashboard to monitor and control IoT devices, view analytics, and manage settings. Features include real-time device control, energy consumption tracking, and system notifications.",
+  "requestFramePermissions": []
+}

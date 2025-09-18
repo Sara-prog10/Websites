@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --color-primary: #f8f7ff; /* Off-white */
+                --color-secondary: #ffffff; /* Pure white */
+                --color-highlight: #eef2f9;
+                --color-text-primary: #111827;
+                --color-text-secondary: #6b7280;
+                --color-accent: #6d28d9;
+                --color-success: #16a34a;
+                --color-warning: #f59e0b;
+                --color-danger: #dc2626;
+            }
+            .dark {
+                --color-primary: #0d1117; /* Near-black */
+                --color-secondary: #161b22; /* Dark charcoal */
+                --color-highlight: #21262d;
+                --color-text-primary: #e6edf3;
+                --color-text-secondary: #8b949e;
+                --color-accent: #8b5cf6; /* Brighter violet for dark mode */
+                --color-success: #22c55e;
+                --color-warning: #facc15;
+                --color-danger: #f87171;
+            }
+            body {
+                @apply bg-primary text-text-primary antialiased;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        secondary: 'var(--color-secondary)',
+                        highlight: 'var(--color-highlight)',
+                        'text-primary': 'var(--color-text-primary)',
+                        'text-secondary': 'var(--color-text-secondary)',
+                        accent: 'var(--color-accent)',
+                        success: 'var(--color-success)',
+                        warning: 'var(--color-warning)',
+                        danger: 'var(--color-danger)',
+                    }
+                }
+            }
+        }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.1.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+        "react/": "https://aistudiocdn.com/react@^19.1.1/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.544.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.2.1"
+      }
+    }
+    </script>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
